@@ -69,6 +69,11 @@
   width: 35px;
 }
 
+.navbar_logo img {
+  width: 30px; 
+  height: auto; 
+}
+
 .navbar_items {
   display: flex;
   align-items: center;
