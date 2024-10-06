@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dani</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+  rel="icon"
+  type="image/svg+xml"
+  href="/src/img/logo.svg"
+/>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <div class="navbar_logo">
+      <img src="/src/img/logo.svg" alt="Logo" />
+    </div>
+    <div class="navbar_items">
+      <a href="#" class="navbar_item">Home</a>
+      <a href="#" class="navbar_item">Projects</a>
+      <a href="#" class="navbar_item">Redes</a>
+    </div>
+  </nav>
+
+
+  <section class="bio">
+    <img src="/src/img/avatar.webp" alt="Avatar" class="bio_image" />
+    <div class="bio_text">
+      <h1>Hi, I'm 🦇|Dani</h1>
+      <p>
+        Soy desarrollador frontend con experiencia en React, JavaScript, y
+        CSS. Me encanta crear interfaces limpias y funcionales. Siempre estoy
+        aprendiendo nuevas tecnologías para mejorar mis habilidades.
+      </p>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+
+  <div class="skills fade-in"> 
+    <!-- Frameworks -->
+    <div class="skills-section">
+      <h2>Frameworks</h2>
+      <ul>
+        <li><img src="https://api.iconify.design/vscode-icons:file-type-astro.svg" alt="Astro Icon">Astro</li>
+        <li><img src="https://api.iconify.design/vscode-icons:file-type-reactjs.svg" alt="React Icon">React</li>
+        <li><img src="https://api.iconify.design/vscode-icons:file-type-next.svg" alt="Next.js Icon">Next.js</li>
+      </ul>
+    </div>
+
+    <!-- Frontend -->
+    <div class="skills-section">
+      <h2>Frontend</h2>
+      <ul>
+        <li><img src="https://api.iconify.design/vscode-icons:file-type-csharp.svg" alt="C# Icon">C#</li>
+        <li><img src="https://img.icons8.com/?size=512&id=20909&format=png" alt="HTML Icon">HTML</li>
+        <li><img src="https://img.icons8.com/?size=512&id=21278&format=png" alt="CSS Icon">CSS</li>
+        <li><img src="https://img.icons8.com/?size=512&id=108784&format=png" alt="JavaScript Icon">JavaScript</li>
+      </ul>
+    </div>
+
+    <!-- Dev Tools -->
+    <div class="skills-section">
+      <h2>Dev Tools</h2>
+      <ul>
+        <li><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="Git Icon">Git</li> <!-- Este icono representará 'none' -->
+        <li><img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000" alt="VS Code Icon">VS Code</li>
+        <li><img src="https://img.icons8.com/?size=100&id=y7WGoWNuIWac&format=png&color=000000" alt="Visual Studio Icon">Visual Studio</li>
+      </ul>
+    </div>
+
+    <!-- Habilidad en proceso -->
+    <div class="skills-section">
+      <h2>Habilidades en Proceso</h2>
+      <ul>
+        <li><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="In Process Icon">Git</li> <!-- Icono de pregunta para 'none' -->
+      </ul>
+
+      <ul>
+        <li><img src="https://api.iconify.design/vscode-icons:file-type-python.svg" alt="In Process Icon">Python</li> <!-- Icono de pregunta para 'none' -->
+      </ul>
+
+      <ul>
+        <li><img src="https://api.iconify.design/vscode-icons:file-type-php.svg" alt="In Process Icon">Php</li> <!-- Icono de pregunta para 'none' -->
+      </ul>
+    </div>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer_content">
+      © 2024 Dani - 🦇
+  </footer>
+
+  <script>
+    // Animación de aparición para la sección de habilidades
+    window.addEventListener('load', () => {
+      const skillsSection = document.querySelector('.skills');
+      skillsSection.classList.add('visible');
+    });
+  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const skillSections = document.querySelectorAll(".skills-section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    skillSections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+</body>
+</html>
